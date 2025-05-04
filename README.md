@@ -118,3 +118,29 @@ Users can search for properties using filters like location, price range, dates,
 
 ### 7. Admin Dashboard (Optional/Advanced)
 An interface for administrators to monitor users, properties, bookings, and flag/report inappropriate content or activity.
+
+## API Security
+
+### Authentication
+We will use JWT (JSON Web Tokens) to verify the identity of users accessing the platform. This ensures that only registered users can access protected endpoints.
+
+### Authorization
+Role-based access control (RBAC) will be implemented to ensure that users can only access resources they are permitted to. For example, a guest cannot access host-specific features like property management.
+
+### Rate Limiting
+Rate limiting will be used to prevent abuse by restricting the number of API requests a user can make within a set time frame. This protects the system from spam and potential denial-of-service (DoS) attacks.
+
+### Input Validation & Sanitization
+All user input will be validated and sanitized to prevent injection attacks, such as SQL injection or XSS (Cross-site Scripting).
+
+### HTTPS Enforcement
+All data transmission will be encrypted via HTTPS to ensure secure communication between clients and the server.
+
+---
+
+### Importance of API Security
+
+- **Protecting User Data:** Prevents unauthorized access to sensitive information such as personal details and payment data.
+- **Securing Payments:** Ensures payment transactions are not intercepted or altered during processing.
+- **Maintaining Platform Integrity:** Prevents malicious users from exploiting the system or gaining unauthorized control over features.
+- **Building User Trust:** A secure platform assures users that their data and interactions are safe, enhancing credibility and adoption.

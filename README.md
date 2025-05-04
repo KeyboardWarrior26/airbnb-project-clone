@@ -38,3 +38,13 @@ Coordinates team efforts, sets deadlines, and ensures deliverables are met on ti
 ### 6. QA Engineer
 Tests features, reports bugs, and ensures the application meets quality standards before release.
 
+## Technology Stack
+
+- **Django**: A high-level Python web framework used to build the backend and RESTful APIs.
+- **PostgreSQL**: A powerful, open-source object-relational database used to store user and listing data.
+- **GraphQL**: A query language for the API, allowing clients to request only the data they need.
+- **Docker**: Used to containerize the application, ensuring consistent environments across development and production.
+- **Nginx**: Acts as a reverse proxy and serves static files in production.
+- **Gunicorn**: A Python WSGI HTTP server for serving Django applications in production.
+- **Redis**: An in-memory data store used for caching and background task management.
+- **Celery**: A task queue to handle asynchronous tasks like sending emails or generating reports.

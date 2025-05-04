@@ -95,3 +95,26 @@ Tests features, reports bugs, and ensures the application meets quality standard
 - A **Booking** is linked to one **Property** and one **User** (Guest).
 - A **Review** is made by a **User** for a **Property**.
 - A **Payment** is linked to one **Booking**.
+
+## Feature Breakdown
+
+### 1. User Management
+Allows users to register, log in, and manage their profiles. It also includes authentication and role-based access, distinguishing between hosts and guests.
+
+### 2. Property Management
+Hosts can list, update, and remove properties. This includes adding property details such as name, description, price, photos, and location.
+
+### 3. Booking System
+Enables guests to search for available properties, make bookings, and view their booking history. It also ensures booking dates don’t overlap and availability is maintained.
+
+### 4. Review and Rating System
+Guests can leave reviews and rate properties after their stay. This helps future users make informed decisions based on real feedback.
+
+### 5. Payment Integration
+Secure payment system for processing booking transactions. Ensures transparency and records all payments for both hosts and guests.
+
+### 6. Search and Filtering
+Users can search for properties using filters like location, price range, dates, and property type. This improves user experience by making property discovery easier.
+
+### 7. Admin Dashboard (Optional/Advanced)
+An interface for administrators to monitor users, properties, bookings, and flag/report inappropriate content or activity.

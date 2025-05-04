@@ -144,3 +144,13 @@ All data transmission will be encrypted via HTTPS to ensure secure communication
 - **Securing Payments:** Ensures payment transactions are not intercepted or altered during processing.
 - **Maintaining Platform Integrity:** Prevents malicious users from exploiting the system or gaining unauthorized control over features.
 - **Building User Trust:** A secure platform assures users that their data and interactions are safe, enhancing credibility and adoption.
+
+## CI/CD Pipeline
+
+CI/CD stands for Continuous Integration and Continuous Deployment. It is a set of practices that allow developers to automatically build, test, and deploy code whenever changes are made. This process ensures that code is always in a deployable state and helps catch bugs early in the development cycle.
+
+CI/CD pipelines are crucial in this project to maintain code quality, ensure consistent testing, and enable smooth deployments. It helps teams deliver new features faster and more reliably.
+
+**Tools we may use:**
+- **GitHub Actions** – For automating workflows such as testing and deployment.
+- **Docker** – For containerizing the application to ensure consistent environments across development, testing, and production.

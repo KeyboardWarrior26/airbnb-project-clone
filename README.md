@@ -48,3 +48,50 @@ Tests features, reports bugs, and ensures the application meets quality standard
 - **Gunicorn**: A Python WSGI HTTP server for serving Django applications in production.
 - **Redis**: An in-memory data store used for caching and background task management.
 - **Celery**: A task queue to handle asynchronous tasks like sending emails or generating reports.
+
+## Database Design
+
+### Entities and Fields:
+
+**1. Users**
+- `id`: Unique identifier
+- `name`: Full name of the user
+- `email`: User's email address
+- `password`: Hashed password
+- `role`: Host or Guest
+
+**2. Properties**
+- `id`: Unique property ID
+- `user_id`: ID of the host (foreign key)
+- `title`: Name of the property
+- `location`: Address or coordinates
+- `price_per_night`: Cost per night
+
+**3. Bookings**
+- `id`: Unique booking ID
+- `user_id`: ID of the guest (foreign key)
+- `property_id`: ID of the booked property (foreign key)
+- `check_in_date`: Start of the booking
+- `check_out_date`: End of the booking
+
+**4. Reviews**
+- `id`: Unique review ID
+- `user_id`: ID of the reviewer (foreign key)
+- `property_id`: ID of the reviewed property (foreign key)
+- `rating`: Star rating
+- `comment`: Written feedback
+
+**5. Payments**
+- `id`: Unique payment ID
+- `booking_id`: ID of the related booking (foreign key)
+- `amount`: Total cost
+- `payment_date`: Date of payment
+- `status`: Payment status (e.g., paid, refunded)
+
+### Relationships:
+
+- A **User** can be a **Host** (has many Properties) or **Guest** (makes many Bookings).
+- A **Property** belongs to one User (Host) but can have many **Bookings** and **Reviews**.
+- A **Booking** is linked to one **Property** and one **User** (Guest).
+- A **Review** is made by a **User** for a **Property**.
+- A **Payment** is linked to one **Booking**.
